@@ -14,25 +14,25 @@ const Footer = () => {
 
           {/* Navigation Links */}
           <div className="space-y-4">
-            <h3 className="text-sm font-medium text-gray-300 mb-4">Navigasi</h3>
+            <h3 className="text-sm font-semibold text-gray-100 mb-4">Navigasi</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm">
+                <a href="#" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm">
+                <a href="#" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm">
+                <a href="#" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
                   Treatments
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm">
+                <a href="#" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
                   Gallery
                 </a>
               </li>
@@ -41,25 +41,25 @@ const Footer = () => {
 
           {/* Social Media */}
           <div className="space-y-4">
-            <h3 className="text-sm font-medium text-gray-300 mb-4">Ikuti Kami</h3>
+            <h3 className="text-sm font-semibold text-gray-100 mb-4">Ikuti Kami</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm">
+                <a href="#" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
                   Instagram
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm">
+                <a href="#" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
                   Tiktok
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm">
+                <a href="#" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
                   Twitter
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm">
+                <a href="#" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
                   Youtube
                 </a>
               </li>
@@ -68,15 +68,15 @@ const Footer = () => {
 
           {/* Legal */}
           <div className="space-y-4">
-            <h3 className="text-sm font-medium text-gray-300 mb-4">Konsultasi :</h3>
+            <h3 className="text-sm font-semibold text-gray-100 mb-4">Konsultasi :</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm">
+                <a href="#" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
                   John Doe - Dokter Gigi
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm">
+                <a href="#" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
                   Jane Smith - Admin
                 </a>
               </li>
@@ -87,22 +87,22 @@ const Footer = () => {
         {/* Location Section - Full Width on Desktop */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
           <div className="lg:col-span-1">
-            <h3 className="text-sm font-medium text-gray-300 mb-4">Lokasi</h3>
+            <h3 className="text-sm font-semibold text-gray-100 mb-4">Lokasi</h3>
             <div className="space-y-3">
-              <p className="text-gray-300 text-sm">
+              <p className="text-gray-100 text-sm">
                 Ahli Gigi Bintaro
                 <br />
                 Bintaro sektor 5 Jl. H. Riban, Jurang Mangu Barat, Kec. Pd. Aren, Kota Tangerang Selatan, Banten 15222
               </p>
               <div className="space-y-2">
-                <p className="text-gray-300 text-sm">
-                  <span className="text-gray-400">Telp:</span> +62 21 1234 5678
+                <p className="text-gray-100 text-sm">
+                  <span className="text-gray-200 font-bold">Telp:</span> +62 21 1234 5678
                 </p>
-                <p className="text-gray-300 text-sm">
-                  <span className="text-gray-400">Email:</span> ahligigibintaro@gmail.com
+                <p className="text-gray-100 text-sm">
+                  <span className="text-gray-200 font-bold">Email:</span> ahligigibintaro@gmail.com
                 </p>
-                <p className="text-gray-300 text-sm">
-                  <span className="text-gray-400">Buka:</span> Senin - Jumat 24 Jam,
+                <p className="text-gray-100 text-sm">
+                  <span className="text-gray-200 font-bold">Buka:</span> Senin - Jumat 24 Jam,
                   <br /> Sabtu & Minggu 10.00 - 20.00 WIB
                 </p>
               </div>
@@ -126,7 +126,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-gray-400">
-          <p className="text-xs text-center sm:text-start text-gray-300">©2025 Ahli Gigi Bintaro. All Rights Reserved.</p>
+          <p className="text-xs text-center sm:text-start text-gray-100">©2025 Ahli Gigi Bintaro. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
