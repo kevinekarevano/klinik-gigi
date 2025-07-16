@@ -2,10 +2,12 @@ import HeroSlider from "@/components/heroSlider";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Clock, MessageCircleMore, Search } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import Cards from "@/components/cards";
-import TestimoniCards from "@/components/testimoniCards";
+import Cards from "@/components/cards/cards";
+import TestimoniCards from "@/components/cards/testimoniCards";
 import { Input } from "@/components/ui/input";
-import BlogCards from "@/components/blogCards";
+import BlogCards from "@/components/cards/blogCards";
+import { Link } from "react-router";
+import GalleryCards from "@/components/cards/galleryCards";
 
 const HomePage = () => {
   return (
@@ -24,9 +26,11 @@ const HomePage = () => {
                 <h2 className="md:text-lg font-medium">Ahli Gigi Bintaro</h2>
               </div>
             </div>
-            <Button className={"bg-accent-700 cursor-pointer rounded-full  hover:bg-accent-600 text-white  mt-7 md:mt-0"}>
-              Buat Janji Sekarang <MessageCircleMore />
-            </Button>
+            <a href={`https://wa.me/6281510718728?text=Halo,%20saya%20ingin%20membuat%20janji%20dengan%20Ahli%20Gigi%20Bintaro`} target="_blank">
+              <Button className={"bg-accent-700 cursor-pointer rounded-full  hover:bg-accent-600 text-white  mt-7 md:mt-0"}>
+                Buat Janji Sekarang <MessageCircleMore />
+              </Button>
+            </a>
           </div>
         </div>
         <Separator className={"bg-accent-700"} />
@@ -36,14 +40,16 @@ const HomePage = () => {
         <div className="flex md:flex-row flex-col-reverse items-center">
           <div>
             <h1 className="text-4xl  lg:text-5xl  md:w-3/4  ">
-              Dokter gigi dan tim kami <span className="text-accent-600 font-medium">siap merawat Anda</span> dan senyum Anda
+              Ahli Gigi dan tim kami <span className="text-accent-600 font-medium">siap merawat Anda</span> dan senyum Anda
             </h1>
             <p className="mt-3 text-sm md:text-base">
-              Pengalaman <span className="text-accent-700 font-semibold">perawatan gigi terbaik</span> untuk seluruh keluarga Anda di <span className="text-accent-700 font-semibold">Bintaro</span>.
+              Kembalikan senyum penuh percaya diri Anda dengan <span className="text-accent-700 font-semibold">layanan gigi palsu terbaik di Bintaro.</span>
             </p>
-            <Button className={"bg-accent-700 cursor-pointer  hover:bg-accent-600 text-white mt-5"}>
-              Buat Janji Sekarang <MessageCircleMore />
-            </Button>
+            <a href={`https://wa.me/6281510718728?text=Halo,%20saya%20ingin%20membuat%20janji%20dengan%20Ahli%20Gigi%20Bintaro`} target="_blank">
+              <Button className={"bg-accent-700 cursor-pointer  hover:bg-accent-600 text-white mt-5"}>
+                Buat Janji Sekarang <MessageCircleMore />
+              </Button>
+            </a>
           </div>
           <img src="asset-1.png" alt="" className="w-100 mb-10   " />
         </div>
@@ -99,7 +105,23 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="container mx-auto max-w-7xl px-5 mt-20">
+      <section className="container mx-auto max-w-7xl px-5 mt-15">
+        <div>
+          <div className="flex items-center justify-center gap-2">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center">Galeri Portofolio</h1>
+            <img src="gallery.png" alt="" className="w-8 md:w-10 rotate-6 hover:rotate-12 duration-75 " />
+          </div>
+          <p className="mt-3 text-sm md:text-base text-center">
+            <span className="text-accent-700 font-semibold">Lihat Bukti Nyata</span> dari Setiap Senyum Penuh Kepercayaan Diri.
+          </p>
+        </div>
+
+        <div className="mt-10">
+          <GalleryCards />
+        </div>
+      </section>
+
+      <section className="container mx-auto max-w-7xl px-5 mt-19 md:mt-25">
         <div>
           <div className="flex items-center  gap-2">
             <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold ">Artikel Terbaru</h1>
@@ -110,21 +132,25 @@ const HomePage = () => {
           </p>
         </div>
 
-        <div className="mt-8 md:mt-14 ">
+        <div className="mt-8 md:mt-10 ">
           <div className="md:flex justify-between items-center">
             <div className="flex items-center  border-accent-700 border-2 rounded-md px-2 w-full md:w-1/3  ">
               <Input placeholder="Cari berita di sini..." className={"border-none selection:bg-accent-700 w-full shadow-none"} />
               <Search className="text-accent-800" />
             </div>
-            <Button className={"bg-accent-700 cursor-pointer hidden md:flex hover:bg-accent-600 text-white  "}>
-              Lihat Selengkapnya <ChevronRight />
-            </Button>
+            <Link to={"/article"}>
+              <Button className={"bg-accent-700 cursor-pointer hidden md:flex hover:bg-accent-600 text-white  "}>
+                Lihat Selengkapnya <ChevronRight />
+              </Button>
+            </Link>
           </div>
 
-          <div className="mt-12">
-            <Button className={"bg-accent-700 cursor-pointer mb-3 md:hidden hover:bg-accent-600 text-white  "}>
-              Lihat Selengkapnya <ChevronRight />
-            </Button>
+          <div className="mt-8">
+            <Link to={"/article"}>
+              <Button className={"bg-accent-700 cursor-pointer mb-3 md:hidden hover:bg-accent-600 text-white  "}>
+                Lihat Selengkapnya <ChevronRight />
+              </Button>
+            </Link>
             <BlogCards />
           </div>
         </div>
@@ -140,18 +166,19 @@ const HomePage = () => {
             <Separator className={"mt-5"} />
             <div className="flex items-center gap-2 mt-5">
               <Clock />
-              <p>Senin - Jumat : Buka 24 jam</p>
+              <p>Senin - Jumat : Buka 07.00 - 23.00 WIB</p>
             </div>
 
             <Separator className={"mt-5"} />
             <div className="flex items-center gap-2 mt-5">
               <Clock />
-              <p>Sabut & Minggu : Buka 10.00 - 20.00 WIB</p>
+              <p>Sabtu : Buka 08.00 - 23.00 WIB</p>
             </div>
-
-            <Button className={"bg-accent-700 cursor-pointer   hover:bg-accent-600 text-white  mt-8 "}>
-              Buat Janji Sekarang <MessageCircleMore />
-            </Button>
+            <a href={`https://wa.me/6281510718728?text=Halo,%20saya%20ingin%20membuat%20janji%20dengan%20Ahli%20Gigi%20Bintaro`} target="_blank">
+              <Button className={"bg-accent-700 cursor-pointer   hover:bg-accent-600 text-white  mt-8 "}>
+                Buat Janji Sekarang <MessageCircleMore />
+              </Button>
+            </a>
           </div>
 
           <img src="jadwal.png" alt="" className=" mx-auto md:mx-0 max-w-2/3   md:w-1/3 mt-25 md:mt-0" />
@@ -166,9 +193,11 @@ const HomePage = () => {
             <p className="text-white text-xl md:text-4xl font-semibold">Ahli Gigi Bintaro</p>
           </div>
           <Separator className={"mt-3 bg-zinc-200"} />
-          <Button className={"border-2 bg-transparent cursor-pointer   hover:bg-accent-600/70 text-white font-semibold  mt-6 "}>
-            Buat Janji Sekarang <MessageCircleMore />
-          </Button>
+          <a href={`https://wa.me/6281510718728?text=Halo,%20saya%20ingin%20membuat%20janji%20dengan%20Ahli%20Gigi%20Bintaro`} target="_blank">
+            <Button className={"border-2 bg-transparent cursor-pointer   hover:bg-accent-600/70 text-white font-semibold  mt-6 "}>
+              Buat Janji Sekarang <MessageCircleMore />
+            </Button>
+          </a>
         </div>
       </div>
     </div>

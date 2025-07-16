@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, MessageCircle, Instagram, Mail, MapPin, Menu, X } from "lucide-react";
+import { MessageCircle, Instagram, Mail, MapPin, Menu, X } from "lucide-react";
 import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
@@ -33,8 +33,8 @@ const Navbar = () => {
               ABOUT US
             </NavLink>
 
-            <NavLink to="/treatments" className={({ isActive }) => `transition-all duration-500 font-medium ${isActive ? "text-accent-700" : "text-gray-700 hover:text-accent-600"}`}>
-              TREATMENTS
+            <NavLink to="/services" className={({ isActive }) => `transition-all duration-500 font-medium ${isActive ? "text-accent-700" : "text-gray-700 hover:text-accent-600"}`}>
+              SERVICES
             </NavLink>
             <NavLink to="location" className={({ isActive }) => `transition-all duration-500 font-medium ${isActive ? "text-accent-700" : "text-gray-700 hover:text-accent-600"}`}>
               LOCATION
@@ -42,8 +42,8 @@ const Navbar = () => {
             <NavLink to="gallery" className={({ isActive }) => `transition-all duration-500 font-medium ${isActive ? "text-accent-700" : "text-gray-700 hover:text-accent-600"}`}>
               GALLERY
             </NavLink>
-            <NavLink to="contact" className={({ isActive }) => `transition-all duration-500 font-medium ${isActive ? "text-accent-700" : "text-gray-700 hover:text-accent-600"}`}>
-              CONTACT
+            <NavLink to="/article" className={({ isActive }) => `transition-all duration-500 font-medium ${isActive ? "text-accent-700" : "text-gray-700 hover:text-accent-600"}`}>
+              ARTICLE
             </NavLink>
           </div>
 
@@ -62,12 +62,12 @@ const Navbar = () => {
               {/* Mobile Contact Info */}
               <div className="border-b pb-3 mb-3">
                 <div className="flex items-center space-x-2 text-gray-600 py-2">
-                  <Phone className="w-4 h-4 text-accent-700" />
-                  <span className="text-sm">08123456789</span>
+                  <MessageCircle className="w-4 h-4 text-accent-700" />
+                  <span className="text-sm">081510718728</span>
                 </div>
                 <div className="flex items-center space-x-2 text-gray-600 py-2">
                   <MessageCircle className="w-4 h-4 text-accent-700" />
-                  <span className="text-sm">08123456789</span>
+                  <span className="text-sm">085816137431</span>
                 </div>
               </div>
 
@@ -78,8 +78,8 @@ const Navbar = () => {
               <NavLink to="/about-us" className={({ isActive }) => `block px-3 py-2 font-medium ${isActive ? "text-accent-700" : "text-gray-700 hover:text-accent-700"}`}>
                 ABOUT US
               </NavLink>
-              <NavLink to="/treatments" className={({ isActive }) => `block px-3 py-2 font-medium ${isActive ? "text-accent-700" : "text-gray-700 hover:text-accent-700"}`}>
-                TREATMENTS
+              <NavLink to="/services" className={({ isActive }) => `block px-3 py-2 font-medium ${isActive ? "text-accent-700" : "text-gray-700 hover:text-accent-700"}`}>
+                SERVICES
               </NavLink>
               <NavLink to="/location" className={({ isActive }) => `block px-3 py-2 font-medium ${isActive ? "text-accent-700" : "text-gray-700 hover:text-accent-700"}`}>
                 LOCATION
@@ -87,8 +87,8 @@ const Navbar = () => {
               <NavLink to="/gallery" className={({ isActive }) => `block px-3 py-2 font-medium ${isActive ? "text-accent-700" : "text-gray-700 hover:text-accent-700"}`}>
                 GALLERY
               </NavLink>
-              <NavLink to="/contact" className={({ isActive }) => `block px-3 py-2 font-medium ${isActive ? "text-accent-700" : "text-gray-700 hover:text-accent-700"}`}>
-                CONTACT
+              <NavLink to="/article" className={({ isActive }) => `block px-3 py-2 font-medium ${isActive ? "text-accent-700" : "text-gray-700 hover:text-accent-700"}`}>
+                ARTICLE
               </NavLink>
 
               <div className="flex items-center justify-between px-3 py-2 border-t mt-3 pt-3">

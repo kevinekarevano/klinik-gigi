@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Footer = () => {
   return (
@@ -17,24 +18,29 @@ const Footer = () => {
             <h3 className="text-sm font-semibold text-gray-100 mb-4">Navigasi</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
+                <Link to={"/"} className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
+                <Link to={"/about-us"} className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
-                  Treatments
-                </a>
+                <Link to={"/services"} className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
+                  Services
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
+                <Link to={"/gallery"} className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
                   Gallery
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link to={"/article"} className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
+                  Article
+                </Link>
               </li>
             </ul>
           </div>
@@ -71,13 +77,13 @@ const Footer = () => {
             <h3 className="text-sm font-semibold text-gray-100 mb-4">Konsultasi :</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
-                  John Doe - Dokter Gigi
+                <a href={`https://wa.me/6281510718728?text=Halo,%20saya%20ingin%20membuat%20janji%20dengan%20Ahli%20Gigi%20Bintaro`} target="_blank" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
+                  Admin 1 - 081510718728
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
-                  Jane Smith - Admin
+                <a href={`https://wa.me/6285816137431?text=Halo,%20saya%20ingin%20membuat%20janji%20dengan%20Ahli%20Gigi%20Bintaro`} target="_blank" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
+                  Admin 2 - 085816137431
                 </a>
               </li>
             </ul>
@@ -96,14 +102,14 @@ const Footer = () => {
               </p>
               <div className="space-y-2">
                 <p className="text-gray-100 text-sm">
-                  <span className="text-gray-200 font-bold">Telp:</span> +62 21 1234 5678
+                  <span className="text-gray-200 font-bold">Telp:</span> +62 858-1613-7431
                 </p>
                 <p className="text-gray-100 text-sm">
                   <span className="text-gray-200 font-bold">Email:</span> ahligigibintaro@gmail.com
                 </p>
                 <p className="text-gray-100 text-sm">
-                  <span className="text-gray-200 font-bold">Buka:</span> Senin - Jumat 24 Jam,
-                  <br /> Sabtu & Minggu 10.00 - 20.00 WIB
+                  <span className="text-gray-200 font-bold">Senin - Jumat :</span> 07.00 - 23.00 WIB <br />
+                  <span className="text-gray-200 font-bold">Sabtu :</span> 08.00 - 23.00 WIB.
                 </p>
               </div>
             </div>
