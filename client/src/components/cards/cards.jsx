@@ -4,26 +4,26 @@ const Cards = () => {
   const newsItems = [
     {
       id: 1,
-      image: "services-image/asset-1.jpg",
+      image: "https://res.cloudinary.com/du6yvy7yw/image/upload/v1752740401/service_3_wnaip5.webp",
       title: "Gigi Palsu Akrilik",
       description: "Gigi palsu akrilik adalah gigi palsu yang di buat dari bahan akrilik baik gigi maupun platnya, proses pembuatan gigi palsu akrilik yaitu pencetakan langsung di mulut pasien untuk sample pembuatan gigi palsu.",
     },
     {
       id: 2,
-      image: "services-image/asset-2.jpg",
+      image: "https://res.cloudinary.com/du6yvy7yw/image/upload/v1752740401/service_1_qciohh.webp",
       title: "Gigi Palsu Valplast",
       description: "Gigi palsu valplast terbuat dari bahan thermoplastik, kelebihannya yaitu kelenturannya sehingga tidak mudah patah apabila terjatuh, dan juga tidak memerlukan kawat penyangga",
     },
     {
       id: 3,
-      image: "services-image/asset-3.jpg",
+      image: "https://res.cloudinary.com/du6yvy7yw/image/upload/v1752740401/service_2_wzifil.webp",
       title: "Gigi Palsu Thermoshen",
       description:
         "Gigi tiruan bahan thermosens. Gigi tiruan lepasan plat thermosens termasuk salah satu jenis gigi palsu terbaru dan terfavorit. Mirip dengan valplast karena cukup fleksibel, tetapi sangat kuat dan bisa menggantikan kehilangan banyak gigi.",
     },
     {
       id: 4,
-      image: "services-image/asset-4.jpg",
+      image: "https://res.cloudinary.com/du6yvy7yw/image/upload/v1752740400/service_4_eaoorf.webp",
       title: "Gigi Palsu Frame",
       description: "Gigi palsu frame adalah gigi palsu lepasan yang terbuat dari bahan logam jenis titanium anti karat sebagai platnya yang di kombinasikan dengan bahan akrilik ataupun valplast.",
     },

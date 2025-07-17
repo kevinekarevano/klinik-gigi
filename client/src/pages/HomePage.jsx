@@ -13,10 +13,10 @@ const HomePage = () => {
   return (
     <div>
       <HeroSlider />
+
+      {/* Welcomeing Section */}
       <section className="container mx-auto max-w-7xl px-5  ">
         <div className="text-center py-10">
-          {/* <h1 className="text-6xl text-accent-800 font-semibold">Selamat Datang</h1> */}
-
           <div className="md:flex items-center justify-between">
             <div className="flex items-center gap-2 justify-center">
               <h1>Selamat Datang</h1>
@@ -36,6 +36,7 @@ const HomePage = () => {
         <Separator className={"bg-accent-700"} />
       </section>
 
+      {/* Hero Section */}
       <section className="container  mx-auto max-w-7xl px-5 mt-13">
         <div className="flex md:flex-row flex-col-reverse items-center">
           <div>
@@ -51,15 +52,16 @@ const HomePage = () => {
               </Button>
             </a>
           </div>
-          <img src="asset-1.png" alt="" className="w-100 mb-10   " />
+          <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752740567/Dentish_l1b8st.webp" alt="" className="w-100 mb-10   " />
         </div>
       </section>
 
+      {/* Services Section */}
       <section className="container mx-auto max-w-7xl px-5 mt-15">
         <div>
           <div className="flex items-center justify-center gap-2">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center">Layanan Kami</h1>
-            <img src="gigi-icon.png" alt="" className="w-8 md:w-10 rotate-6 hover:rotate-12 duration-75 " />
+            <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752741650/gigi1_rtez47.webp" alt="Gigi Icon" className="w-8 md:w-10 rotate-6 hover:rotate-12 duration-75 " />
           </div>
           <p className="mt-3 text-sm md:text-base text-center">
             <span className="text-accent-700 font-semibold">Gigi palsu berkualitas </span> untuk kenyamanan dan kepercayaan diri Anda.
@@ -71,11 +73,12 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Why Choose Us Section */}
       <section className="container mx-auto max-w-7xl px-5 mt-15">
         <div>
           <div className="flex items-center justify-center gap-2">
             <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-center">Kenapa Memilih Kami?</h1>
-            <img src="gigi-2.png" alt="" className="w-8 md:w-12 rotate-6 hover:rotate-12 duration-75 " />
+            <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752741863/gigi2_gki8mv.webp" alt="Gigi Icon" className="w-8 md:w-12 rotate-6 hover:rotate-12 duration-75 " />
           </div>
           <p className="mt-3 text-sm md:text-base text-center">
             Pilihan tepat untuk gigi palsu yang <span className="text-accent-700 font-semibold">nyaman, estetik, dan terpercaya.</span>
@@ -83,16 +86,17 @@ const HomePage = () => {
         </div>
 
         <div className="mt-10">
-          <img src="mengapa-kami.png" alt="" className="hidden md:block" />
-          <img src="mengapa-kami2.png" alt="" className="w-full md:hidden" />
+          <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752740751/whyChooseUs-1_g0mvkw.webp" alt="Kenapa Memilih Kami" className="hidden md:block" />
+          <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752740750/whyChooseUs-2_uywu65.webp" alt="Kenapa Memilih Kami" className="w-full md:hidden" />
         </div>
       </section>
 
+      {/* Testimoni Section */}
       <section className="container mx-auto max-w-7xl px-5 mt-20">
         <div>
           <div className="flex items-center justify-center gap-2">
             <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-center">Apa Kata Mereka?</h1>
-            <img src="testimoni.png" alt="" className="w-8 md:w-12 rotate-12 hover:rotate-16 duration-75 " />
+            <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752741373/star_mhhpnw.webp" alt="Stars Icon" className="w-8 md:w-12 rotate-12 hover:rotate-16 duration-75 " />
           </div>
           <p className="mt-3 text-sm md:text-base text-center">
             {" "}
@@ -105,11 +109,12 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Gallery Section */}
       <section className="container mx-auto max-w-7xl px-5 mt-15">
         <div>
           <div className="flex items-center justify-center gap-2">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center">Galeri Portofolio</h1>
-            <img src="gallery.png" alt="" className="w-8 md:w-10 rotate-6 hover:rotate-12 duration-75 " />
+            <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752741770/gallery_arxcmq.webp" alt="Gallery Icon" className="w-8 md:w-10 rotate-6 hover:rotate-12 duration-75 " />
           </div>
           <p className="mt-3 text-sm md:text-base text-center">
             <span className="text-accent-700 font-semibold">Lihat Bukti Nyata</span> dari Setiap Senyum Penuh Kepercayaan Diri.
@@ -121,11 +126,12 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Article Section */}
       <section className="container mx-auto max-w-7xl px-5 mt-19 md:mt-25">
         <div>
           <div className="flex items-center  gap-2">
             <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold ">Artikel Terbaru</h1>
-            <img src="news.png" alt="" className="w-8 md:w-14  hover:rotate-8 duration-75 " />
+            <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752741471/news_oewhao.webp" alt="News Icon" className="w-8 md:w-14  hover:rotate-8 duration-75 " />
           </div>
           <p className="mt-3 text-sm md:text-base ">
             Dapatkan <span className="text-accent-700 font-semibold">tips, edukasi, dan cerita menarik</span> seputar dunia gigi palsu.
@@ -151,11 +157,13 @@ const HomePage = () => {
                 Lihat Selengkapnya <ChevronRight />
               </Button>
             </Link>
+
             <BlogCards />
           </div>
         </div>
       </section>
 
+      {/* Opening Schedule Section */}
       <section className="container mx-auto max-w-7xl px-5 mt-15 mb-20">
         <div className="md:flex justify-between items-center ">
           <div className="md:w-1/2">
@@ -181,12 +189,13 @@ const HomePage = () => {
             </a>
           </div>
 
-          <img src="jadwal.png" alt="" className=" mx-auto md:mx-0 max-w-2/3   md:w-1/3 mt-25 md:mt-0" />
+          <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752740937/Gigi_Frame_b91cwd.webp" alt="gambar gigi dengan ilustrasi" className=" mx-auto md:mx-0 max-w-2/3   md:w-1/3 mt-25 md:mt-0" />
         </div>
       </section>
 
+      {/* Footer Image */}
       <div className="w-full h-60 relative mt-35 ">
-        <img src="testlagi.png" alt="" className="w-full grayscale-50 brightness-50 sepia-50 h-full object-cover" />
+        <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752741055/suasana_klinik_mphxgd.webp" alt="Suasana Klinik Ahli Gigi Bintaro" className="w-full grayscale-50 brightness-50 sepia-50 h-full object-cover" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 text-center -translate-y-1/2 ">
           <div className="flex items-center justify-center gap-3">
             <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/c_crop,w_850,h_850/v1752577550/Copilot_20250715_175507_sk8uuu.png" alt="logo" className="w-16 hidden md:block mx-auto" />
@@ -200,6 +209,7 @@ const HomePage = () => {
           </a>
         </div>
       </div>
+      
     </div>
   );
 };

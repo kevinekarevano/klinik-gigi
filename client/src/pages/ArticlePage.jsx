@@ -9,7 +9,7 @@ const ArticlePage = () => {
         <div>
           <div className="flex items-center justify-center gap-2">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center">Artikel Terbaru</h1>
-            <img src="news.png" alt="" className="w-10 md:w-15 rotate-6 hover:rotate-12 duration-75 " />
+            <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752741471/news_oewhao.webp" alt="Nwes Icon" className="w-10 md:w-15 rotate-6 hover:rotate-12 duration-75 " />
           </div>
           <p className="mt-3 text-sm md:text-base text-center">
             Dapatkan <span className="text-accent-700 font-semibold">Tips dan Edukasi</span> Terbaru untuk Merawat Senyum Anda

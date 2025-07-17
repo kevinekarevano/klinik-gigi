@@ -1,4 +1,3 @@
-// src/hooks/useScrollToTop.js
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 

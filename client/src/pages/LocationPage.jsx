@@ -8,7 +8,7 @@ const LocationPage = () => {
         <div>
           <div className="flex items-center justify-center gap-2">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center">Lokasi Praktik</h1>
-            <img src="location.png" alt="" className="w-8 md:w-11 rotate-15 hover:rotate-20 duration-75 " />
+            <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752741571/location_dpc4t9.webp" alt="Location Icon" className="w-8 md:w-11 rotate-15 hover:rotate-20 duration-75 " />
           </div>
           <p className="mt-3 text-sm md:text-base text-center">
             Kenyamanan Perawatan Dimulai dari <span className="text-accent-700 font-semibold">Lokasi yang Mudah Ditemukan.</span>

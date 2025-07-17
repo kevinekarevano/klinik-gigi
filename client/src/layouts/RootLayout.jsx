@@ -26,6 +26,7 @@ const RootLayout = () => {
 
   return (
     <div>
+      {/* Scroll to Top Button */}
       <div className={`${showToTop ? "" : "translate-y-25"} fixed bottom-4 transition-all duration-500  right-4 z-50 bg-accent-700 text-white p-3 rounded-full shadow-lg cursor-pointer`} onClick={scrollToTop}>
         <ChevronUp size={30} />
       </div>

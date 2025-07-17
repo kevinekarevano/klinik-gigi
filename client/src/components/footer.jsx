@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router";
 
 const Footer = () => {
@@ -102,7 +101,7 @@ const Footer = () => {
               </p>
               <div className="space-y-2">
                 <p className="text-gray-100 text-sm">
-                  <span className="text-gray-200 font-bold">Telp:</span> +62 858-1613-7431
+                  <span className="text-gray-200 font-bold">Telp:</span> +62 815-1071-8728
                 </p>
                 <p className="text-gray-100 text-sm">
                   <span className="text-gray-200 font-bold">Email:</span> ahligigibintaro@gmail.com

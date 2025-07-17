@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { X } from "lucide-react";
 
 export default function WaFloatingButton() {
@@ -32,7 +32,7 @@ export default function WaFloatingButton() {
             >
               <span className="font-medium text-sm whitespace-nowrap">{contact.name}</span>
               <div className="bg-white bg-opacity-20 rounded-full">
-                <img src="whatsapp.png" alt="wa logo" className="w-7" />
+                <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752741203/whatsapp_omxtkt.webp" alt="Whatsapp Logo" className="w-7" />
               </div>
             </button>
           </div>
@@ -45,7 +45,7 @@ export default function WaFloatingButton() {
           onClick={() => setIsOpen(!isOpen)}
           className={`w-14 h-14 rounded-full flex items-center p-1 justify-center shadow-lg transition-all duration-300 cursor-pointer transform hover:scale-110 ${isOpen ? "bg-red-500 hover:bg-red-600 rotate-180" : "bg-accent-700 "}`}
         >
-          {isOpen ? <X size={24} className="text-white" /> : <img src="whatsapp.png" alt="wa logo" />}
+          {isOpen ? <X size={24} className="text-white" /> : <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752741203/whatsapp_omxtkt.webp" alt="Whatsapp Logo" />}
         </button>
       </div>
     </div>
