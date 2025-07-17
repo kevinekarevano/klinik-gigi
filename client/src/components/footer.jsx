@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
-            <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/c_crop,w_850,h_850/v1752577550/Copilot_20250715_175507_sk8uuu.png" alt="logo" className="w-32 mx-auto" />
+            <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752743605/logo_ahliGigiBintaro_qj4db6.webp" alt="logo" className="w-32 mx-auto" />
             <h2 className="text-2xl font-light mb-8 tracking-wide text-center">Ahli Gigi Bintaro</h2>
           </div>
 
