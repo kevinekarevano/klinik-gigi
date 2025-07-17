@@ -7,7 +7,7 @@ const AboutUsPage = () => {
     <div className="container mx-auto max-w-7xl px-5 md:mt-18 mb-20">
       <div className="md:flex justify-center ">
         <div className="md:w-1/3">
-          <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752577550/Copilot_20250715_175507_sk8uuu.png" alt="logo" className="  w-full" />
+          <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752743605/logo_ahliGigiBintaro_qj4db6.webp" alt="logo" className="  w-full" />
         </div>
 
         <div className="md:w-1/2">

@@ -16,7 +16,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to={"/"} className="flex items-center">
             <div className="flex items-center">
-              <img className="w-18 md:w-20" src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752577550/Copilot_20250715_175507_sk8uuu.png" alt="logo ahli gigi bintaro" />
+              <img className="w-18 md:w-20" src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752743605/logo_ahliGigiBintaro_qj4db6.webp" alt="logo ahli gigi bintaro" />
               <div>
                 <div className="text-md md:text-lg font-semibold text-gray-800">Ahli Gigi Bintaro</div>
               </div>

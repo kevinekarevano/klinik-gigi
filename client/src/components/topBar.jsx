@@ -1,4 +1,4 @@
-import { Instagram, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Instagram, MapPin, MessageCircle } from "lucide-react";
 
 const TopBar = () => {
   return (
@@ -18,7 +18,6 @@ const TopBar = () => {
           <span className="text-sm text-gray-600">Follow Us :</span>
           <div className="flex space-x-2">
             <Instagram className="w-4 h-4 text-gray-600 hover:text-accent-700 cursor-pointer" />
-            <Mail className="w-4 h-4 text-gray-600 hover:text-accent-700 cursor-pointer" />
             <MessageCircle className="w-4 h-4 text-gray-600 hover:text-accent-700 cursor-pointer" />
             <MapPin className="w-4 h-4 text-gray-600 hover:text-accent-700 cursor-pointer" />
           </div>

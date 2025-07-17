@@ -22,7 +22,7 @@ const HomePage = () => {
               <h1>Selamat Datang</h1>
               <span className="text-4xl font-thin">|</span>
               <div className="flex items-center">
-                <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752577550/Copilot_20250715_175507_sk8uuu.png" alt="logo ahli gigi bintaro" className="w-13 md:w-16" />
+                <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752743605/logo_ahliGigiBintaro_qj4db6.webp" alt="logo ahli gigi bintaro" className="w-13 md:w-16" />
                 <h2 className="md:text-lg font-medium">Ahli Gigi Bintaro</h2>
               </div>
             </div>
@@ -198,7 +198,7 @@ const HomePage = () => {
         <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752741055/suasana_klinik_mphxgd.webp" alt="Suasana Klinik Ahli Gigi Bintaro" className="w-full grayscale-50 brightness-50 sepia-50 h-full object-cover" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 text-center -translate-y-1/2 ">
           <div className="flex items-center justify-center gap-3">
-            <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/c_crop,w_850,h_850/v1752577550/Copilot_20250715_175507_sk8uuu.png" alt="logo" className="w-16 hidden md:block mx-auto" />
+            <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752743605/logo_ahliGigiBintaro_qj4db6.webp" alt="logo" className="w-16 hidden md:block mx-auto" />
             <p className="text-white text-xl md:text-4xl font-semibold">Ahli Gigi Bintaro</p>
           </div>
           <Separator className={"mt-3 bg-zinc-200"} />
@@ -209,7 +209,7 @@ const HomePage = () => {
           </a>
         </div>
       </div>
-      
+
     </div>
   );
 };

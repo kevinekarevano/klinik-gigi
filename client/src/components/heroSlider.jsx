@@ -37,10 +37,10 @@ const HeroSlider = () => {
         }}
       >
         <SwiperSlide>
-          <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752577681/Desktop_-_2_rpqtu2.png" alt="banner1" className="w-full" />
+          <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752743452/banner_1_iz8tz9.webp" alt="banner1" className="w-full" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752577680/Desktop_-_1_ypmq6r.png" alt="banner2" className="w-full" />
+          <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752743450/banner_2_dakbtq.webp" alt="banner2" className="w-full" />
         </SwiperSlide>
       </Swiper>
     </div>
