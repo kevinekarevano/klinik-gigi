@@ -11,7 +11,7 @@ const AboutUsPage = () => {
         </div>
 
         <div className="md:w-1/2">
-          <h1 className="mb-4 font-medium text-zinc-800">Tentang Kami Testing</h1>
+          <h1 className="mb-4 font-medium text-zinc-800">Tentang Kami</h1>
           <h1 className="text-4xl font-semibold">Ahli Gigi Bintaro</h1>
           <h2 className="text-accent-700 font-medium mt-1">Layanan Pemasangan Gigi Palsu</h2>
           <div className="space-y-4 mt-5">
