@@ -49,23 +49,8 @@ const Footer = () => {
             <h3 className="text-sm font-semibold text-gray-100 mb-4">Ikuti Kami</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
+                <a href="https://www.instagram.com/ahligigibintaro_official/" target="_blank" rel="noopener noreferrer" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
                   Instagram
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
-                  Tiktok
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-100 hover:text-white transition-colors duration-200 text-sm">
-                  Youtube
                 </a>
               </li>
             </ul>

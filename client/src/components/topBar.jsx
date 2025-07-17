@@ -17,9 +17,15 @@ const TopBar = () => {
         <div className="flex items-center space-x-4">
           <span className="text-sm text-gray-600">Follow Us :</span>
           <div className="flex space-x-2">
-            <Instagram className="w-4 h-4 text-gray-600 hover:text-accent-700 cursor-pointer" />
-            <MessageCircle className="w-4 h-4 text-gray-600 hover:text-accent-700 cursor-pointer" />
-            <MapPin className="w-4 h-4 text-gray-600 hover:text-accent-700 cursor-pointer" />
+            <a href="https://www.instagram.com/ahligigibintaro_official/" target="_blank" rel="noopener noreferrer">
+              <Instagram className="w-4 h-4 text-gray-600 hover:text-accent-700 cursor-pointer" />
+            </a>
+            <a href={`https://wa.me/6281510718728?text=Halo,%20saya%20ingin%20konsultasi%20dengan%20Ahli%20Gigi%20Bintaro`} target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="w-4 h-4 text-gray-600 hover:text-accent-700 cursor-pointer" />
+            </a>
+            <a href="https://maps.app.goo.gl/oXtSxWk16tv68dCg6" target="_blank" rel="noopener noreferrer">
+              <MapPin className="w-4 h-4 text-gray-600 hover:text-accent-700 cursor-pointer" />
+            </a>
           </div>
         </div>
       </div>

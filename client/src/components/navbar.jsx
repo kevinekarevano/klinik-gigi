@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MessageCircle, Instagram, Mail, MapPin, Menu, X } from "lucide-react";
+import { MessageCircle, Instagram, MapPin, Menu, X } from "lucide-react";
 import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
@@ -94,10 +94,15 @@ const Navbar = () => {
               <div className="flex items-center justify-between px-3 py-2 border-t mt-3 pt-3">
                 <span className="text-sm text-gray-600">Follow Us:</span>
                 <div className="flex space-x-3">
-                  <Instagram className="w-5 h-5 text-gray-600 hover:text-accent-700 cursor-pointer" />
-                  <Mail className="w-5 h-5 text-gray-600 hover:text-accent-700 cursor-pointer" />
-                  <MessageCircle className="w-5 h-5 text-gray-600 hover:text-accent-700 cursor-pointer" />
-                  <MapPin className="w-5 h-5 text-gray-600 hover:text-accent-700 cursor-pointer" />
+                  <a href="https://www.instagram.com/ahligigibintaro_official/" target="_blank" rel="noopener noreferrer">
+                    <Instagram className="w-4 h-4 text-gray-600 hover:text-accent-700 cursor-pointer" />
+                  </a>
+                  <a href={`https://wa.me/6281510718728?text=Halo,%20saya%20ingin%20konsultasi%20dengan%20Ahli%20Gigi%20Bintaro`} target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="w-4 h-4 text-gray-600 hover:text-accent-700 cursor-pointer" />
+                  </a>
+                  <a href="https://maps.app.goo.gl/oXtSxWk16tv68dCg6" target="_blank" rel="noopener noreferrer">
+                    <MapPin className="w-4 h-4 text-gray-600 hover:text-accent-700 cursor-pointer" />
+                  </a>
                 </div>
               </div>
             </div>
