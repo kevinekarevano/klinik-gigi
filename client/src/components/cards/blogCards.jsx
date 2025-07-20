@@ -4,7 +4,7 @@ const BlogCards = () => {
   const newsItems = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80",
+      image: "https://i.pinimg.com/1200x/db/49/10/db4910d40b5e950b57e397b4448d4248.jpg",
       title: "Tips Merawat Gigi Palsu Agar Awet",
       description: "Pelajari cara merawat gigi palsu dengan benar agar tetap nyaman digunakan dan tahan lama. Simak tips sederhana yang bisa Anda lakukan di rumah.",
     },

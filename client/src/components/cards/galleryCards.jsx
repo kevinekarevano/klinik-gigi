@@ -55,7 +55,6 @@ const GalleryCards = () => {
             </div>
 
             {/* Content Section */}
-          
           </div>
         ))}
       </div>
