@@ -63,6 +63,33 @@ export const getAllBlog = async (req, res) => {
   }
 };
 
+export const getBlogById = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const blog = await blogModel.findById(id);
+
+    if (!blog) {
+      return res.status(404).json({
+        success: false,
+        message: "Blog not found",
+      });
+    }
+
+    res.status(200).json({
+      success: true,
+      message: "Blog retireved successfully",
+      data: blog,
+    });
+  } catch (error) {
+    console.error(`Error: ${error.message}`);
+    res.status(500).json({
+      success: false,
+      message: "Internal server error",
+    });
+  }
+};
+
 export const updateBlog = async (req, res) => {
   try {
     const { id } = req.params;

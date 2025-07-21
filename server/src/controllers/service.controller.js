@@ -90,6 +90,58 @@ export const getServiceById = async (req, res) => {
   }
 };
 
+export const updateService = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { title, content } = req.body;
+    const file = req.file;
+
+    const serviceToUpdate = await serviceModel.findById(id);
+
+    if (!serviceModel) {
+      return res.status(404).json({
+        success: false,
+        message: "Service not found",
+      });
+    }
+
+    // handle update image if neccesary
+    if (file) {
+      // delete older image from cloudinary
+      if (serviceToUpdate.image) {
+        const publicId = extractPublicId(serviceToUpdate.image);
+        await cloudinary.uploader.destroy(publicId);
+      }
+
+      // Upload new image
+      const b64 = Buffer.from(file.buffer).toString("base64");
+      const dataURI = "data:" + file.mimetype + ";base64," + b64;
+      const result = await cloudinary.uploader.upload(dataURI, {
+        folder: "Service",
+      });
+
+      serviceToUpdate.image = result.secure_url;
+    }
+
+    serviceToUpdate.title = title || serviceToUpdate.title;
+    serviceToUpdate.content = content || serviceToUpdate.content;
+
+    const updatedService = await serviceToUpdate.save();
+
+    res.status(200).json({
+      success: true,
+      message: "Service berhasil diperbarui",
+      data: updatedService,
+    });
+  } catch (error) {
+    console.error(`Error: ${error.message}`);
+    res.status(500).json({
+      success: false,
+      message: "Internal server error",
+    });
+  }
+};
+
 export const deleteService = async (req, res) => {
   try {
     const { id } = req.params;

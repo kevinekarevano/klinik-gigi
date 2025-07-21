@@ -2,9 +2,14 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import connectDb from "./config/db.js";
+import cookieParser from "cookie-parser";
 import serviceRoutes from "./routes/serviceRoutes.js";
 import blogRoutes from "./routes/blogRoutes.js";
 import galleryRoutes from "./routes/galleryRoutes.js";
+import bannerRoutes from "./routes/bannerRoutes.js";
+import logoRoutes from "./routes/logoRoutes.js";
+import adminRoutes from "./routes/adminRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 dotenv.config();
 const app = express();
 const PORT = 3000;
@@ -14,17 +19,22 @@ connectDb();
 
 // Middleware
 app.use(express.json());
-
-//  Routes
+app.use(cookieParser());
 app.use(
   cors({
     origin: process.env.CLIENT_URL,
     optionsSuccessStatus: 200,
   })
 );
+
+//  Routes
 app.use("/api/service", serviceRoutes);
 app.use("/api/blog", blogRoutes);
 app.use("/api/gallery", galleryRoutes);
+app.use("/api/banner", bannerRoutes);
+app.use("/api/logo", logoRoutes);
+app.use("/api/admin", adminRoutes);
+app.use("/api/auth", authRoutes);
 
 app.get("/", (req, res) => {
   res.status(200).json({
