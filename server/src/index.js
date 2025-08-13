@@ -1,5 +1,5 @@
-import express from "express";
 import dotenv from "dotenv";
+import express from "express";
 import cors from "cors";
 import connectDb from "./config/db.js";
 import cookieParser from "cookie-parser";
@@ -18,14 +18,14 @@ const PORT = 3000;
 connectDb();
 
 // Middleware
-app.use(express.json());
-app.use(cookieParser());
 app.use(
   cors({
     origin: process.env.CLIENT_URL,
     credentials: true,
   })
 );
+app.use(express.json());
+app.use(cookieParser());
 
 //  Routes
 app.use("/api/service", serviceRoutes);
