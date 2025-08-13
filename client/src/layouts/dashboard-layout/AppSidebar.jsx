@@ -82,7 +82,7 @@ const sidebarMenus = [
   },
 ];
 
-export function AppSidebar() {
+const AppSidebar = () => {
   const logout = useAuthStore((state) => state.logout);
   const navigate = useNavigate();
 
@@ -143,4 +143,6 @@ export function AppSidebar() {
       </SidebarFooter>
     </Sidebar>
   );
-}
+};
+
+export default AppSidebar;
