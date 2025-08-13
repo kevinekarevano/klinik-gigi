@@ -1,7 +1,7 @@
 import { SidebarProvider } from "@/components/ui/sidebar";
 import React from "react";
 import { Outlet } from "react-router";
-import { AppSidebar } from "./appSidebar";
+import { AppSidebar } from "./appSidebar.jsx";
 import DashboardNavbar from "@/components/navbar/navbar-dashboard";
 import CustomTrigger from "./customTrigger";
 
