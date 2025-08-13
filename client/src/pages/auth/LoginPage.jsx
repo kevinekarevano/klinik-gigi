@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Loader from "@/components/ui/loader";
 import useAuthStore from "@/store/auth-store";
+import useLogoStore from "@/store/logo-store";
 import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
@@ -11,7 +12,7 @@ import { useNavigate } from "react-router";
 const LoginPage = () => {
   const navigate = useNavigate();
   const checkAuth = useAuthStore((s) => s.checkAuth);
-
+  const logo = useLogoStore((s) => s.logo);
   const [loading, setLoading] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -57,7 +58,7 @@ const LoginPage = () => {
     <div className="min-h-screen bg-gradient-to-t from-teal-100 to-slate-100 flex px-4 justify-center text-center items-center">
       <form onSubmit={handleLogin} className="w-full max-w-sm space-y-5">
         <div>
-          <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752743605/logo_ahliGigiBintaro_qj4db6.webp" alt="logo ahli gigi bintaro" className="w-1/3 mx-auto" />
+          <img src={logo?.image} alt="logo ahli gigi bintaro" className="w-1/3 mx-auto" />
           <h1 className="text-accent-900 text-xl font-semibold">
             Welcome to, Ahli Gigi Bintaro <span>👋</span>
           </h1>
