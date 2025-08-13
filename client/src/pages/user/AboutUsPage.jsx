@@ -1,16 +1,17 @@
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 import useLogoStore from "@/store/logo-store";
 import { ChevronRight, CircleCheck, MessageCircleMore } from "lucide-react";
 import { Link } from "react-router";
 
 const AboutUsPage = () => {
   const logo = useLogoStore((state) => state.logo);
+  const logoLoading = useLogoStore((state) => state.loading);
+
   return (
     <div className="container mx-auto max-w-7xl px-5 md:mt-18 mb-20">
       <div className="md:flex justify-center ">
-        <div className="md:w-1/3">
-          <img src={logo?.image} alt="logo" className="  w-full" />
-        </div>
+        <div className="md:w-1/3">{logoLoading ? <Skeleton className={"w-full my-5 h-80 rounded-md mr-1 bg-accent-700/35"} /> : <img src={logo?.image} alt="logo" className="  w-full" />}</div>
 
         <div className="md:w-1/2">
           <h1 className="mb-4 font-medium text-zinc-800">Tentang Kami</h1>

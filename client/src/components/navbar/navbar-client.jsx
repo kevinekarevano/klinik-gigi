@@ -2,10 +2,12 @@ import { useState } from "react";
 import { MessageCircle, Instagram, MapPin, Menu, X } from "lucide-react";
 import { Link, NavLink } from "react-router";
 import useLogoStore from "@/store/logo-store";
+import { Skeleton } from "../ui/skeleton";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const logo = useLogoStore((state) => state.logo);
+  const logoLoading = useLogoStore((state) => state.loading);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -18,7 +20,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to={"/"} className="flex items-center">
             <div className="flex items-center">
-              <img className="w-18 md:w-20" src={logo?.image} alt="logo ahli gigi bintaro" />
+              {logoLoading ? <Skeleton className={"w-10 h-10 rounded-full mr-1 bg-accent-700/35"} /> : <img className="w-18 md:w-20" src={logo?.image} alt="logo ahli gigi bintaro" />}
               <div>
                 <div className="text-md md:text-lg font-semibold text-gray-800">Ahli Gigi Bintaro</div>
               </div>

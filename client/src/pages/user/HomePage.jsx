@@ -10,16 +10,18 @@ import { Link } from "react-router";
 import GalleryCards from "@/components/cards/galleryCards";
 import { useState } from "react";
 import useLogoStore from "@/store/logo-store";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const HomePage = () => {
   const logo = useLogoStore((state) => state.logo);
+  const logoLoading = useLogoStore((state) => state.loading);
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <div>
       <HeroSlider />
 
-      {/* Welcomeing Section */}
+      {/* Welcoming Section */}
       <section className="container mx-auto max-w-7xl px-5  ">
         <div className="text-center py-10">
           <div className="md:flex items-center justify-between">
@@ -27,7 +29,13 @@ const HomePage = () => {
               <h1>Selamat Datang</h1>
               <span className="text-4xl font-thin">|</span>
               <div className="flex items-center">
-                <img src={logo?.image} alt="logo ahli gigi bintaro" className="w-13 md:w-16" />
+                {logoLoading ? (
+                  <Skeleton className={"w-10 h-10 rounded-full mr-1 bg-accent-700/35"} />
+                ) : (
+                  <>
+                    <img src={logo?.image} alt="logo ahli gigi bintaro" className="w-13 md:w-16" />
+                  </>
+                )}
                 <h2 className="md:text-lg font-medium">Ahli Gigi Bintaro</h2>
               </div>
             </div>
@@ -210,7 +218,7 @@ const HomePage = () => {
         <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752741055/suasana_klinik_mphxgd.webp" alt="Suasana Klinik Ahli Gigi Bintaro" className="w-full grayscale-50 brightness-50 sepia-50 h-full object-cover" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 text-center -translate-y-1/2 ">
           <div className="flex items-center justify-center gap-3">
-            <img src={logo?.image} alt="logo" className="w-16 hidden md:block mx-auto" />
+            {logoLoading ? <Skeleton className={"w-10 h-10 rounded-full mr-1 bg-accent-700"} /> : <img src={logo?.image} alt="logo" className="w-16 hidden md:block mx-auto" />}
             <p className="text-white text-xl md:text-4xl font-semibold">Ahli Gigi Bintaro</p>
           </div>
           <Separator className={"mt-3 bg-zinc-200"} />

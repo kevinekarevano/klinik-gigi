@@ -1,8 +1,10 @@
 import useLogoStore from "@/store/logo-store";
 import { Link } from "react-router";
+import { Skeleton } from "./ui/skeleton";
 
 const Footer = () => {
   const logo = useLogoStore((state) => state.logo);
+  const logoLoading = useLogoStore((state) => state.loading);
 
   return (
     <footer className="bg-accent-800 text-white py-16 px-4 sm:px-6 lg:px-8">
@@ -11,7 +13,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
-            <img src={logo?.image} alt="logo" className="w-32 mx-auto" />
+            {logoLoading ? <Skeleton className={"w-full h-40 rounded-md mb-3 mr-1 bg-accent-700/35"} /> : <img src={logo?.image} alt="logo" className="w-32 mx-auto" />}
             <h2 className="text-2xl font-light mb-8 tracking-wide text-center">Ahli Gigi Bintaro</h2>
           </div>
 

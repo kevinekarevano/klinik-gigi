@@ -1,9 +1,6 @@
 import bcrypt from "bcryptjs";
 import adminModel from "../models/admin.model.js";
 import jwt from "jsonwebtoken";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 export const login = async (req, res) => {
   try {
@@ -12,7 +9,7 @@ export const login = async (req, res) => {
       return res.status(400).json({ success: false, message: "Please provide all fields" });
     }
 
-    const findAdmin = await adminModel.findOne({ username: { $regex: `^${username}$`, $options: "i" } }).select("+password");
+    const findAdmin = await adminModel.findOne({ username: { $regex: `^${username}$`, $options: "i" } });
     if (!findAdmin) {
       return res.status(404).json({ success: false, message: "Invalid credentials" });
     }
