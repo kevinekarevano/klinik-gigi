@@ -64,6 +64,15 @@ export const deleteGallery = async (req, res) => {
   try {
     const { id } = req.params;
 
+    const galleryCount = await galleryModel.countDocuments();
+    if (galleryCount <= 1) {
+      return res.status(404).json({
+        success: false,
+        message: "Cannot delete the last image. At least one image is required.",
+        data: null,
+      });
+    }
+
     const deletedGallery = await galleryModel.findByIdAndDelete(id);
 
     if (!deletedGallery) {

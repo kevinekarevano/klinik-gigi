@@ -1,11 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Clock, MessageCircleMore, Search } from "lucide-react";
+import { Clock, MessageCircleMore } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Cards from "@/components/cards/cards";
 import TestimoniCards from "@/components/cards/testimoniCards";
-import { Input } from "@/components/ui/input";
-import BlogCards from "@/components/cards/blogCards";
-import { Link } from "react-router";
+
 import GalleryCards from "@/components/cards/galleryCards";
 
 const AdsPage = () => {

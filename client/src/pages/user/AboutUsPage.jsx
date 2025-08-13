@@ -1,13 +1,15 @@
 import { Button } from "@/components/ui/button";
+import useLogoStore from "@/store/logo-store";
 import { ChevronRight, CircleCheck, MessageCircleMore } from "lucide-react";
 import { Link } from "react-router";
 
 const AboutUsPage = () => {
+  const logo = useLogoStore((state) => state.logo);
   return (
     <div className="container mx-auto max-w-7xl px-5 md:mt-18 mb-20">
       <div className="md:flex justify-center ">
         <div className="md:w-1/3">
-          <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752743605/logo_ahliGigiBintaro_qj4db6.webp" alt="logo" className="  w-full" />
+          <img src={logo?.image} alt="logo" className="  w-full" />
         </div>
 
         <div className="md:w-1/2">
@@ -26,9 +28,9 @@ const AboutUsPage = () => {
             <li className="flex  gap-2">
               <CircleCheck className=" w-6" /> Keahlian & Teknologi Terkini
             </li>
-            <l className="flex items-center gap-2" i>
+            <li className="flex items-center gap-2">
               <CircleCheck className=" w-6" /> Perawatan yang Nyaman & Solusi Personal
-            </l>
+            </li>
           </ul>
 
           <div className="flex flex-col md:items-center md:flex-row  gap-3 mt-8">

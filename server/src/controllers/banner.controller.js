@@ -64,6 +64,15 @@ export const deleteBanner = async (req, res) => {
   try {
     const { id } = req.params;
 
+    const bannerCount = await bannerModel.countDocuments();
+    if (bannerCount <= 1) {
+      return res.status(404).json({
+        success: false,
+        message: "Cannot delete the last banner. At least one banner is required.",
+        data: null,
+      });
+    }
+
     const deletedBanner = await bannerModel.findByIdAndDelete(id);
 
     if (!deletedBanner) {

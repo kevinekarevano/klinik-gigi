@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import Footer from "@/components/footer";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/navbar/navbar-client";
 import { Outlet } from "react-router";
 import { ChevronUp } from "lucide-react";
 import TopBar from "@/components/topBar";

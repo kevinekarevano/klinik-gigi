@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Loader from "@/components/ui/loader";
 import axios from "axios";
 import { MessageCircleMore } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -30,11 +31,30 @@ const ServiceDetailPage = () => {
   }, [id]);
 
   if (isLoading) {
-    return <p>Memuat...</p>;
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div>
+          <Loader />
+          <p className="text-center mt-3 font-medium text-accent-700">Memuat layanan...</p>
+        </div>
+      </div>
+    );
   }
 
   if (error) {
-    return <p>{error}</p>;
+    return (
+      <div className="min-h-screen flex text-accent-700 items-center justify-center">
+        <div>
+          <h1 className="text-6xl text-center font-bold">Oops...</h1>
+          <p className="text-center text-accent-600 mt-5 font-medium ">
+            Layanan yang anda cari, tidak ditemukan🥲 Kembali ke{" "}
+            <Link to={"/services"} className="font-semibold underline italic">
+              Halaman Layanan
+            </Link>
+          </p>
+        </div>
+      </div>
+    );
   }
 
   if (!service) {
@@ -48,7 +68,7 @@ const ServiceDetailPage = () => {
       </div>
 
       <div className="text-center mt-6">
-        <h1 className="text-4xl font-semibold">{service.title}</h1>
+        <h1 className="text-4xl font-medium">{service.title}</h1>
         <p className="text-accent-800 font-medium">Layanan</p>
       </div>
 

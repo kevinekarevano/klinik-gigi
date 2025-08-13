@@ -1,8 +1,10 @@
 import BlogCards from "@/components/cards/blogCards";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
+import { useState } from "react";
 
 const ArticlePage = () => {
+  const [searchTerm, setSearchTerm] = useState("");
   return (
     <div className="container mx-auto max-w-7xl px-5 md:mt-18 mb-20">
       <section className="container mx-auto max-w-7xl px-5 mt-15">
@@ -18,10 +20,10 @@ const ArticlePage = () => {
 
         <div className="mt-10">
           <div className="flex items-center mx-auto mb-10  border-accent-700 border-2 rounded-md px-2 w-full md:w-1/3  ">
-            <Input placeholder="Cari berita di sini..." className={"border-none selection:bg-accent-700 w-full shadow-none"} />
+            <Input onChange={(e) => setSearchTerm(e.target.value)} value={searchTerm} placeholder="Cari berita di sini..." className={"border-none selection:bg-accent-700 w-full shadow-none"} />
             <Search className="text-accent-800" />
           </div>
-          <BlogCards />
+          <BlogCards searchTerm={searchTerm} />
         </div>
       </section>
     </div>

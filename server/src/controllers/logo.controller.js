@@ -91,11 +91,20 @@ export const updateLogo = async (req, res) => {
 
 export const getAllLogo = async (req, res) => {
   try {
-    const logo = await logoModel.find();
+    // Ambil satu logo terbaru (bisa juga pakai .findOne({}) jika ingin logo pertama)
+    const logo = await logoModel.findOne().sort({ createdAt: -1 });
+
+    if (!logo) {
+      return res.status(404).json({
+        success: false,
+        message: "Logo not found",
+        data: null,
+      });
+    }
 
     res.status(200).json({
       success: true,
-      message: "logo image retrieved successfully",
+      message: "Logo image retrieved successfully",
       data: logo,
     });
   } catch (error) {

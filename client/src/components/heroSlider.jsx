@@ -1,14 +1,43 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { ChevronRight, ChevronLeft } from "lucide-react";
+import axios from "axios";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Skeleton } from "./ui/skeleton";
 
 const HeroSlider = () => {
+  const [banner, setBanner] = useState([]);
+  const [loading, setLoading] = useState(false);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
+  const fetchBanner = async () => {
+    setLoading(true);
+    try {
+      const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/api/banner/get-all`);
+      setBanner(data.data);
+    } catch (error) {
+      console.error("Gagal mengambil data banner:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchBanner();
+  }, []);
+
+  if (loading) {
+    return (
+      <div>
+        <Skeleton className={"h-[60vh] w-full bg-accent-800 r ounded-none"} />
+      </div>
+    );
+  }
+
   return (
     <div className="w-full relative">
       <button ref={prevRef} className="opacity-60 hidden md:block  absolute z-10 top-1/2 left-4 -translate-y-1/2 bg-accent-700 rounded-full p-2 shadow cursor-pointer">
@@ -36,12 +65,11 @@ const HeroSlider = () => {
           swiper.navigation.update();
         }}
       >
-        <SwiperSlide>
-          <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752743452/banner_1_iz8tz9.webp" alt="banner1" className="w-full" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752743450/banner_2_dakbtq.webp" alt="banner2" className="w-full" />
-        </SwiperSlide>
+        {banner.map((item, index) => (
+          <SwiperSlide key={index}>
+            <img src={item.image} alt={`banner ${index + 1}`} className="w-full" />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

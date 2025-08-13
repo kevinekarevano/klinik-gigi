@@ -5,8 +5,6 @@ import { ChevronRight, ChevronLeft } from "lucide-react";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-
 const TestimoniCards = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -60,7 +58,7 @@ const TestimoniCards = () => {
             </div>
           </div>
         </SwiperSlide>
-       
+
         <SwiperSlide>
           <div className="border shadow min-h-65  rounded-sm p-5">
             <h1 className="text-lg font-semibold text-accent-700">Risky Dwi Saputro</h1>
@@ -72,7 +70,7 @@ const TestimoniCards = () => {
             </div>
           </div>
         </SwiperSlide>
-       
+
         <SwiperSlide>
           <div className="border shadow min-h-65  rounded-sm p-5">
             <h1 className="text-lg font-semibold text-accent-700">Risky Bakti</h1>
@@ -84,7 +82,7 @@ const TestimoniCards = () => {
             </div>
           </div>
         </SwiperSlide>
-       
+
         <SwiperSlide>
           <div className="border shadow min-h-65  rounded-sm p-5">
             <h1 className="text-lg font-semibold text-accent-700">Muhammad Roffi</h1>
@@ -96,7 +94,7 @@ const TestimoniCards = () => {
             </div>
           </div>
         </SwiperSlide>
-       
+
         <SwiperSlide>
           <div className="border shadow min-h-65  rounded-sm p-5">
             <h1 className="text-lg font-semibold text-accent-700">Alfan</h1>
@@ -107,9 +105,8 @@ const TestimoniCards = () => {
               <p className="mt-5 text-sm text-gray-500">www.ahligigibintaro.com</p>
             </div>
           </div>
-       
         </SwiperSlide>
-     
+
         <SwiperSlide>
           <div className="border shadow min-h-65  rounded-sm p-5">
             <h1 className="text-lg font-semibold text-accent-700">Tifa Aulia Cantika</h1>

@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import cloudinary from "../config/cloudinary.js";
 import serviceModel from "../models/service.model.js";
 import extractPublicId from "../utils/extractPublicId.js";
@@ -67,6 +68,13 @@ export const getServiceById = async (req, res) => {
   try {
     const { id } = req.params;
 
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid service ID",
+      });
+    }
+
     const service = await serviceModel.findById(id);
 
     if (!service) {
@@ -98,7 +106,7 @@ export const updateService = async (req, res) => {
 
     const serviceToUpdate = await serviceModel.findById(id);
 
-    if (!serviceModel) {
+    if (!serviceToUpdate) {
       return res.status(404).json({
         success: false,
         message: "Service not found",

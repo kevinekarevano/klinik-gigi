@@ -8,8 +8,13 @@ import { Input } from "@/components/ui/input";
 import BlogCards from "@/components/cards/blogCards";
 import { Link } from "react-router";
 import GalleryCards from "@/components/cards/galleryCards";
+import { useState } from "react";
+import useLogoStore from "@/store/logo-store";
 
 const HomePage = () => {
+  const logo = useLogoStore((state) => state.logo);
+  const [searchTerm, setSearchTerm] = useState("");
+
   return (
     <div>
       <HeroSlider />
@@ -22,7 +27,7 @@ const HomePage = () => {
               <h1>Selamat Datang</h1>
               <span className="text-4xl font-thin">|</span>
               <div className="flex items-center">
-                <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752743605/logo_ahliGigiBintaro_qj4db6.webp" alt="logo ahli gigi bintaro" className="w-13 md:w-16" />
+                <img src={logo?.image} alt="logo ahli gigi bintaro" className="w-13 md:w-16" />
                 <h2 className="md:text-lg font-medium">Ahli Gigi Bintaro</h2>
               </div>
             </div>
@@ -141,7 +146,14 @@ const HomePage = () => {
         <div className="mt-8 md:mt-10 ">
           <div className="md:flex justify-between items-center">
             <div className="flex items-center  border-accent-700 border-2 rounded-md px-2 w-full md:w-1/3  ">
-              <Input placeholder="Cari berita di sini..." className={"border-none selection:bg-accent-700 w-full shadow-none"} />
+              <Input
+                onChange={(e) => {
+                  setSearchTerm(e.target.value);
+                }}
+                value={searchTerm}
+                placeholder="Cari berita di sini..."
+                className={"border-none selection:bg-accent-700 w-full shadow-none"}
+              />
               <Search className="text-accent-800" />
             </div>
             <Link to={"/article"}>
@@ -158,7 +170,7 @@ const HomePage = () => {
               </Button>
             </Link>
 
-            <BlogCards />
+            <BlogCards searchTerm={searchTerm} />
           </div>
         </div>
       </section>
@@ -198,7 +210,7 @@ const HomePage = () => {
         <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752741055/suasana_klinik_mphxgd.webp" alt="Suasana Klinik Ahli Gigi Bintaro" className="w-full grayscale-50 brightness-50 sepia-50 h-full object-cover" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 text-center -translate-y-1/2 ">
           <div className="flex items-center justify-center gap-3">
-            <img src="https://res.cloudinary.com/du6yvy7yw/image/upload/v1752743605/logo_ahliGigiBintaro_qj4db6.webp" alt="logo" className="w-16 hidden md:block mx-auto" />
+            <img src={logo?.image} alt="logo" className="w-16 hidden md:block mx-auto" />
             <p className="text-white text-xl md:text-4xl font-semibold">Ahli Gigi Bintaro</p>
           </div>
           <Separator className={"mt-3 bg-zinc-200"} />
@@ -209,7 +221,6 @@ const HomePage = () => {
           </a>
         </div>
       </div>
-
     </div>
   );
 };

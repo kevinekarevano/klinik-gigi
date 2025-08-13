@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import cloudinary from "../config/cloudinary.js";
 import blogModel from "../models/blog.model.js";
 import extractPublicId from "../utils/extractPublicId.js";
@@ -66,6 +67,13 @@ export const getAllBlog = async (req, res) => {
 export const getBlogById = async (req, res) => {
   try {
     const { id } = req.params;
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid blog ID",
+      });
+    }
 
     const blog = await blogModel.findById(id);
 
@@ -145,6 +153,15 @@ export const updateBlog = async (req, res) => {
 export const deleteBlog = async (req, res) => {
   try {
     const { id } = req.params;
+
+    const blogCount = await blogModel.countDocuments();
+    if (blogCount <= 1) {
+      return res.status(404).json({
+        success: false,
+        message: "Cannot delete the last blog. At least one blog is required.",
+        data: null,
+      });
+    }
 
     const deletedBlog = await blogModel.findByIdAndDelete(id);
 

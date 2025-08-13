@@ -2,6 +2,7 @@ import axios from "axios";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
+import Loader from "../ui/loader";
 
 const Cards = () => {
   const [services, setServices] = useState([]);
@@ -23,7 +24,12 @@ const Cards = () => {
   }, []);
 
   if (loading) {
-    return <p>Memuat layanan...</p>;
+    return (
+      <div className="min-h-screen">
+        <Loader />
+        <p className="text-center mt-3 font-medium text-accent-700">Memuat layanan...</p>
+      </div>
+    );
   }
 
   return (
@@ -43,11 +49,6 @@ const Cards = () => {
               <div className="p-6">
                 {/* Title */}
                 <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">{item.title}</h3>
-
-                {/* Description */}
-                <div className="text-gray-600 text-sm mb-4 line-clamp-2 leading-relaxed">
-                  <div dangerouslySetInnerHTML={{ __html: item.content }} />
-                </div>
 
                 {/* Read More Link */}
                 <Link to={`/service/${item._id}`} className="flex items-center text-accent-700 hover:text-accent-800 cursor-pointer transition-colors">
