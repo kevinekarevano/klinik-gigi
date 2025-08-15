@@ -63,6 +63,8 @@ const ArticleDetailPage = () => {
 
   return (
     <div className="container mx-auto max-w-7xl px-5 mt-5 md:mt-12 mb-20">
+      <title>Ahli Gigi Bintaro - Article</title>
+
       <div className="h-[50vh] max-w-md  mx-auto ">
         <img className="rounded-lg h-full w-full object-cover" src={articles.image} alt={articles.title} />
       </div>

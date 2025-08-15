@@ -10,6 +10,7 @@ const AboutUsPage = () => {
 
   return (
     <div className="container mx-auto max-w-7xl px-5 md:mt-18 mb-20">
+      <title>Ahli Gigi Bintaro - About Us</title>
       <div className="md:flex justify-center ">
         <div className="md:w-1/3">{logoLoading ? <Skeleton className={"w-full my-5 h-80 rounded-md mr-1 bg-accent-700/35"} /> : <img src={logo?.image} alt="logo" className="  w-full" />}</div>
 

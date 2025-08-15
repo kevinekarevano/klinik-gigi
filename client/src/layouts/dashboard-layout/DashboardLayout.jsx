@@ -13,7 +13,7 @@ const DashboardLayout = () => {
         <DashboardNavbar />
         <CustomTrigger />
         <div className="p-5 ">
-          <title>Dashboard</title>
+          <title>Ahli Gigi Bintaro - Dashboard</title>
           <Outlet />
         </div>
       </main>

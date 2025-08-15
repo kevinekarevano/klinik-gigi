@@ -3,6 +3,8 @@ import Cards from "@/components/cards/cards";
 const ServicesPage = () => {
   return (
     <div className="container mx-auto max-w-7xl px-5 md:mt-18 mb-20">
+      <title>Ahli Gigi Bintaro - Services</title>
+
       <section className="container mx-auto max-w-7xl px-5 mt-15">
         <div>
           <div className="flex items-center justify-center gap-2">

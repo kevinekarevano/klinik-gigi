@@ -30,7 +30,7 @@ const HomePage = () => {
               <span className="text-4xl font-thin">|</span>
               <div className="flex items-center">
                 {logoLoading ? (
-                  <Skeleton className={"w-10 h-10 rounded-full mr-1 bg-accent-700/35"} />
+                  <Skeleton className={"w-10 h-10 rounded-full mr-1 bg-gray-200"} />
                 ) : (
                   <>
                     <img src={logo?.image} alt="logo ahli gigi bintaro" className="w-13 md:w-16" />

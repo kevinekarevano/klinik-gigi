@@ -63,6 +63,8 @@ const ServiceDetailPage = () => {
 
   return (
     <div className="container mx-auto max-w-7xl px-5 mt-5 md:mt-12 mb-20">
+      <title>Ahli Gigi Bintaro - Service</title>
+
       <div className="h-[50vh] max-w-md  mx-auto ">
         <img className="rounded-lg h-full w-full object-cover" src={service.image} alt={service.title} />
       </div>

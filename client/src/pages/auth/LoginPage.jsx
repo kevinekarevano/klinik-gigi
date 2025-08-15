@@ -56,6 +56,7 @@ const LoginPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-t from-teal-100 to-slate-100 flex px-4 justify-center text-center items-center">
+      <title>Ahli Gigi Bintaro - Login</title>
       <form onSubmit={handleLogin} className="w-full max-w-sm space-y-5">
         <div>
           <img src={logo?.image} alt="logo ahli gigi bintaro" className="w-1/3 mx-auto" />

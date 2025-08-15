@@ -33,7 +33,7 @@ const HeroSlider = () => {
   if (loading) {
     return (
       <div>
-        <Skeleton className={"h-[60vh] w-full bg-accent-800 r ounded-none"} />
+        <Skeleton className={"h-[25vh] md:h-[70vh] w-full bg-gray-400  rounded-none"} />
       </div>
     );
   }

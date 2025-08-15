@@ -3,6 +3,8 @@ import GalleryCards from "@/components/cards/galleryCards";
 const GalleryPage = () => {
   return (
     <div className="container mx-auto max-w-7xl px-5 md:mt-18 mb-20">
+      <title>Ahli Gigi Bintaro - Gallery</title>
+
       <section className="container mx-auto max-w-7xl px-5 mt-15">
         <div>
           <div className="flex items-center justify-center gap-3">

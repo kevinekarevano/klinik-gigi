@@ -20,7 +20,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to={"/"} className="flex items-center">
             <div className="flex items-center">
-              {logoLoading ? <Skeleton className={"w-10 h-10 rounded-full mr-1 bg-accent-700/35"} /> : <img className="w-18 md:w-20" src={logo?.image} alt="logo ahli gigi bintaro" />}
+              {logoLoading ? <Skeleton className={"w-10 h-10 rounded-full mr-1 bg-gray-200"} /> : <img className="w-18 md:w-20" src={logo?.image} alt="logo ahli gigi bintaro" />}
               <div>
                 <div className="text-md md:text-lg font-semibold text-gray-800">Ahli Gigi Bintaro</div>
               </div>
