@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import Loader from "../ui/loader";
+import { Skeleton } from "../ui/skeleton";
 
 const Cards = () => {
   const [services, setServices] = useState([]);
@@ -25,9 +26,40 @@ const Cards = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen">
-        <Loader />
-        <p className="text-center mt-3 font-medium text-accent-700">Memuat layanan...</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="bg-white rounded-sm p-2 shadow overflow-hidden ">
+          {/* Image Section */}
+          <Skeleton className={"h-48 bg-gray-300"} />
+
+          {/* Content Section */}
+          <div className="my-4 w-1/2">
+            {/* Title */}
+            <Skeleton className={"h-4  bg-gray-300"} />
+            <Skeleton className={"h-3 mt-2 w-1/2 bg-gray-300"} />
+          </div>
+        </div>
+        <div className="bg-white rounded-sm p-2 shadow overflow-hidden ">
+          {/* Image Section */}
+          <Skeleton className={"h-48 bg-gray-300"} />
+
+          {/* Content Section */}
+          <div className="my-4 w-1/2">
+            {/* Title */}
+            <Skeleton className={"h-4  bg-gray-300"} />
+            <Skeleton className={"h-3 mt-2 w-1/2 bg-gray-300"} />
+          </div>
+        </div>
+        <div className="bg-white rounded-sm p-2 shadow overflow-hidden ">
+          {/* Image Section */}
+          <Skeleton className={"h-48 bg-gray-300"} />
+
+          {/* Content Section */}
+          <div className="my-4 w-1/2">
+            {/* Title */}
+            <Skeleton className={"h-4  bg-gray-300"} />
+            <Skeleton className={"h-3 mt-2 w-1/2 bg-gray-300"} />
+          </div>
+        </div>
       </div>
     );
   }
